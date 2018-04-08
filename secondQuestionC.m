@@ -1,10 +1,9 @@
-function secondQuestionA(delta)
+function secondQuestionC(delta)
 wc = pi / 6
-M = ceil((1.8 * pi)/delta) + 50
+M = ceil((6.6 * pi)/delta)
 hd = idealLowPass(wc, M)
-wRect = (rectwin(M))'
-h = hd .* wRect
-
+wHamming = (hamming(M))'
+h = hd .* wHamming
 [db] = freqzModified(h, [1])
 
 figure
@@ -15,8 +14,8 @@ title(ax1, 'Impulso Ideal')
 ylabel(ax1, 'hd[n]')
 
 ax2 = subplot(2, 2, 2)
-stem(wRect)
-title(ax2, 'Rectangular')
+stem(wHamming)
+title(ax2, 'Hamming')
 ylabel(ax2, 'w[n]')
 
 ax3 = subplot(2, 2, 3)

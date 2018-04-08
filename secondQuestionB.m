@@ -1,9 +1,9 @@
-function secondQuestionA(delta)
+function secondQuestionB(delta)
 wc = pi / 6
-M = ceil((1.8 * pi)/delta) + 50
+M = ceil((6.1 * pi)/delta) + 1
 hd = idealLowPass(wc, M)
-wRect = (rectwin(M))'
-h = hd .* wRect
+wBartlett = (bartlett(M))'
+h = hd .* wBartlett
 
 [db] = freqzModified(h, [1])
 
@@ -15,8 +15,8 @@ title(ax1, 'Impulso Ideal')
 ylabel(ax1, 'hd[n]')
 
 ax2 = subplot(2, 2, 2)
-stem(wRect)
-title(ax2, 'Rectangular')
+stem(wBartlett)
+title(ax2, 'Bartlett')
 ylabel(ax2, 'w[n]')
 
 ax3 = subplot(2, 2, 3)
