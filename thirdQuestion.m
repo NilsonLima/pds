@@ -7,12 +7,12 @@ As = 40
 delta = (ws - wp)
 wc = delta / 2
 
-beta = (0.1102 * (As - 8.7))
+beta = (0.5842 * ((As - 21) ^ 0.4)) + (0.07886 * (As - 21))
 
 MHamming = ceil((6.6 * pi)/delta)
 MHanning = ceil((6.2 * pi)/delta)
 MBlackman = ceil((11 * pi)/delta)
-MKaiser = 68
+MKaiser = ceil((As - 8)/(2.285 * delta))
 
 wHamming = (hamming(MHamming))'
 wHanning = (hann(MHanning))'

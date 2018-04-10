@@ -1,6 +1,6 @@
 function secondQuestionE(delta)
 wc = (pi / 6)
-M = ceil((11 * pi)/delta) + 10
+M = ceil((11 * pi)/delta)
 hd = idealLowPass(wc, M)
 wBlackman = (blackman(M))'
 h = hd .* wBlackman

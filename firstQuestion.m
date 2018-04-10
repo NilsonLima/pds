@@ -1,5 +1,5 @@
 function firstQuestion
-delta = 0.08 * pi
+delta = 0.1 * pi
 wc1 = 0.3 * pi
 wc2 = 0.4 * pi
 wc3 = 0.5 * pi
