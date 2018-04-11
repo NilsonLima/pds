@@ -1,6 +1,6 @@
 function secondQuestionC(delta)
 wc = pi / 6
-M = ceil((6.6 * pi)/delta) + 1
+M = ceil((6.6 * pi)/delta)
 hd = idealLowPass(wc, M)
 wHamming = (hamming(M))'
 h = hd .* wHamming

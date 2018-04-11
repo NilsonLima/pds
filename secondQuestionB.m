@@ -1,6 +1,6 @@
 function secondQuestionB(delta)
 wc = pi / 6
-M = ceil((6.1 * pi)/delta) + 1
+M = ceil((6.1 * pi)/delta)
 hd = idealLowPass(wc, M)
 wBartlett = (bartlett(M))'
 h = hd .* wBartlett

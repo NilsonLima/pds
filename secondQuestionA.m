@@ -1,6 +1,6 @@
 function secondQuestionA(delta)
 wc = pi / 6
-M = ceil((1.8 * pi)/delta) + 50
+M = ceil((1.8 * pi)/delta)
 hd = idealLowPass(wc, M)
 wRect = (rectwin(M))'
 h = hd .* wRect

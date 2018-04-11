@@ -26,7 +26,7 @@ ylabel(ax3, 'h[n]')
 
 ax4 = subplot(2, 2, 4)
 plot(ax4, db)
-title(ax4, 'Magnitude em dB')
+title(ax4, 'Magnitude em dB') %dadasd
 ylabel(ax4, 'Decibeis')
 grid on
 
