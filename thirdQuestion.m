@@ -5,7 +5,7 @@ Rp = 0.1
 As = 40
 
 delta = (ws - wp)
-wc = delta / 2
+wc = (ws + wp) / 2
 
 beta = (0.5842 * ((As - 21) ^ 0.4)) + (0.07886 * (As - 21))
 
@@ -32,31 +32,39 @@ hKaiser = hdKaiser .* wKaiser
 figure
 
 ax1 = subplot(2, 2, 1)
-[db] = freqzModified(hHamming, [1])
-plot(ax1, db)
+[db, mag, phase, w] = freqzModified(hHamming, [1])
+plot(w/pi, db)
+ax1.XTick = 0:.1:1
 title(ax1, 'Hamming')
-ylabel(ax1, 'db')
+xlabel(ax1, 'Frequencia em pi unidades')
+ylabel(ax1, 'dB')
 grid on
 
 ax2 = subplot(2, 2, 2)
-[db] = freqzModified(hHanning, [1])
-plot(ax2, db)
+[db, mag, phase, w] = freqzModified(hHanning, [1])
+plot(w/pi, db)
+ax2.XTick = 0:.1:1
 title(ax2, 'Hanning')
-ylabel(ax2, 'db')
+xlabel(ax2, 'Frequencia em pi unidades')
+ylabel(ax2, 'dB')
 grid on
 
 ax3 = subplot(2, 2, 3)
-[db] = freqzModified(hBlackman, [1])
-plot(ax3, db)
+[db, mag, phase, w] = freqzModified(hBlackman, [1])
+plot(w/pi, db)
+ax3.XTick = 0:.1:1
 title(ax3, 'Blackman')
-ylabel(ax3, 'db')
+xlabel(ax3, 'Frequencia em pi unidades')
+ylabel(ax3, 'dB')
 grid on
 
 ax4 = subplot(2, 2, 4)
-[db] = freqzModified(hKaiser, [1])
-plot(ax4, db)
+[db, mag, phase, w] = freqzModified(hKaiser, [1])
+plot(w/pi, db)
+ax4.XTick = 0:.1:1
 title(ax4, 'Kaiser')
-ylabel(ax4, 'db')
+xlabel(ax4, 'Frequencia em pi unidades')
+ylabel(ax4, 'dB')
 grid on
 
 MHamming
