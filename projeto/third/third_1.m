@@ -24,7 +24,7 @@ img_med = im2single(img_med);
 
 mse1 = immse(img1, img_miss);
 mse2 = immse(img2, img_miss);
-mse_diff = immse(img_diff, img_miss);
+mse_med = immse(img_med, img_miss);
 
 fprintf('Erro médio quadrático entre as saida_117.bmp e saida_118_2.bmp: %f\n', mse1);
 fprintf('Erro médio quadrático entre as saida_119.bmp e saida_118_2.bmp: %f\n', mse2);

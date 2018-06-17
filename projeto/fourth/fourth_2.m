@@ -23,6 +23,9 @@ ylabel('Amplitude');
 %[b a] = cheby1(5, 0.5, 0.06);
 %yfilt = filter(b, a, ynoise);
 
+%b = fir1(50, 0.06, gausswin(51));
+%b = fir1(50, 0.06, hann(51));
+%b = fir1(50, 0.06, hamming(51));
 b = fir1(50, 0.06, bartlett(51));
 yfilt = filter(b, 1, ynoise);
 

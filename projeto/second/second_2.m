@@ -7,3 +7,5 @@ dilated = imdilate(pad, se);
 [lb, n] = bwlabel(dilated);
 rgb = label2rgb(lb, 'hsv', 'k', 'shuffle');
 imshowpair(img, rgb, 'Montage');
+
+fprintf('Número de texturas diferentes: %d\n', n);

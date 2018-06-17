@@ -50,7 +50,6 @@ sound(y, Fs);
 pause(length(y)/Fs);
 sound(y_deg, Fs);
 
-%{
 window = hamming(512);
 noverlap = 256;
 nfft = 1024;
@@ -59,9 +58,11 @@ figure;
 [S, F, T, P] = spectrogram(y, window, noverlap, nfft, Fs, 'yaxis');
 surf(T, F, 10 * log10(P), 'edgecolor', 'none');
 axis tight;
-title('dg105.wav')
+title('dg105.wav');
+xlabel('Seconds');
+ylabel('Frequency');
 view(0, 90);
 colormap(jet);
 set(gca, 'clim', [-80 -30]);
-%}
+
 

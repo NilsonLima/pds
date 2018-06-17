@@ -9,7 +9,7 @@ val = hsv(:, :, 3);
 
 hue_length = 0.125;
 hue_pos = 0:1:8;
-ue_range = hue_pos * hue_length;
+hue_range = hue_pos * hue_length;
 
 figure
 histogram(hue, hue_range)
