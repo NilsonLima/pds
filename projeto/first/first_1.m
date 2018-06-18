@@ -6,3 +6,6 @@ w = [y z];
 plotDFT(y);
 plotDFT(z);
 plotDFT(w);
+
+figure;
+spectrogram(w, 'yaxis');
